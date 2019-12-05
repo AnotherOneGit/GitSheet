@@ -59,27 +59,32 @@
 </script>
 
 <main>
-	<h1>Заполните все поля и копируйте команды в консоль</h1>
-	<form>
-		Username: <input placeholder="Ваше имя" bind:value={UserName}>
-		Projectname: <input placeholder="Имя проекта" bind:value={ProjectName}>
-		Commit: <input placeholder="Введите коммит" bind:value={commit}>
-	</form>
+	<!-- <h1>Заполните все поля и копируйте команды в консоль</h1> -->
+	<div class="row">
+		<form class="col s12">
+			<div class="row">
+				<div class="input-field col s6">
+					<label for="username">Username:</label><br>
+					<input id="username" placeholder="Ваше имя" bind:value={UserName}>
+				</div>
+				<div class="input-field col s6">
+					<label for="projectname">Projectname:</label><br>
+					<input id="projectname" placeholder="Имя проекта" bind:value={ProjectName}>
+				</div>
+				<div class="input-field col s12">
+					<label for="commit">Commit:</label><br>
+					<input id="commit" placeholder="Введите коммит" bind:value={commit}>
+				</div>
+			</div>
+		</form>
+	</div>
 	<ol>
-		<li>
-			<input readonly id="ssh" value="https://github.com">
-			<button class="waves-effect waves-light btn-small" on:click={sshCopy}>Copy</button>
-
-			<input readonly id="bare" value="git init --bare">
-			<button class="waves-effect waves-light btn-small" on:click={bareCopy}>Copy</button>
-		</li>
-	<h3>На локальной машине, в папке проекта:</h3>
 		<li>
 			<input readonly id="init" value="git init">
 			<button class="waves-effect waves-light btn-small" on:click={initCopy}>Copy</button>
 		</li>
 		<li>
-			<input readonly id="remote" value="git remote add origin https://github.com/{UserName}/{ProjectName}.git">
+			<input readonly id="remote" value="git remote add origin https://github.com/{UserName}/{ProjectName}">
 			<button class="waves-effect waves-light btn-small" on:click={remoteCopy}>Copy</button>
 		</li>
 		<li>
