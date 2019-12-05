@@ -2,60 +2,13 @@
 	export let UserName;
 	export let ProjectName;
 	export let commit;
-	function sshCopy() {
-		let copyText = document.getElementById("ssh");
+	function Copy(){
+		let id = this.id;
+		alert(id);
+		let copyText = document.getElementById(id);
 		copyText.select();
 		document.execCommand("copy");
-}
-
-	function mkdirCopy() {
-		let copyText = document.getElementById("mkdir");
-		copyText.select();
-		document.execCommand("copy");
-}
-
-	function bareCopy() {
-		let copyText = document.getElementById("bare");
-		copyText.select();
-		document.execCommand("copy");
-}
-
-	function cdCopy() {
-		let copyText = document.getElementById("cd");
-		copyText.select();
-		document.execCommand("copy");
-}
-
-	function initCopy() {
-		let copyText = document.getElementById("init");
-		copyText.select();
-		document.execCommand("copy");
-}
-
-	function remoteCopy() {
-		let copyText = document.getElementById("remote");
-		copyText.select();
-		document.execCommand("copy");
-}
-
-	function addCopy() {
-		let copyText = document.getElementById("add");
-		copyText.select();
-		document.execCommand("copy");
-}
-
-	function commitCopy() {
-		let copyText = document.getElementById("commit");
-		copyText.select();
-		document.execCommand("copy");
-}
-
-	function pushCopy() {
-		let copyText = document.getElementById("push");
-		copyText.select();
-		document.execCommand("copy");
-}
-
+	}
 </script>
 
 <main class="container row">
@@ -91,23 +44,23 @@
 	<ol>
 		<li>
 			<input readonly id="init" value="git init">
-			<button class="waves-effect waves-light btn-small" on:click={initCopy}>Copy</button>
+			<button id="init" class="waves-effect waves-light btn-small" on:click={Copy}>Copy</button>
 		</li>
 		<li>
 			<input readonly id="remote" value="git remote add origin https://github.com/{UserName}/{ProjectName}">
-			<button class="waves-effect waves-light btn-small" on:click={remoteCopy}>Copy</button>
+			<button id="remote" class="waves-effect waves-light btn-small" on:click={Copy}>Copy</button>
 		</li>
 		<li>
 			<input readonly id="add" value="git add .">
-			<button class="waves-effect waves-light btn-small" on:click={addCopy}>Copy</button>
+			<button id="add" class="waves-effect waves-light btn-small" on:click={Copy}>Copy</button>
 		</li>
 		<li>
 			<input readonly id="commit" value="git commit -m '{commit}'">
-			<button class="waves-effect waves-light btn-small" on:click={commitCopy}>Copy</button>
+			<button id="commit" class="waves-effect waves-light btn-small" on:click={Copy}>Copy</button>
 		</li>
 		<li>
 			<input readonly id="push" value="git push origin master">
-			<button class="waves-effect waves-light btn-small" on:click={pushCopy}>Copy</button>
+			<button id="push" class="waves-effect waves-light btn-small" on:click={Copy}>Copy</button>
 		</li>
 	</ol>
 </main>	
