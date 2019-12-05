@@ -111,23 +111,3 @@
 		</li>
 	</ol>
 </main>
-
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-		background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
-	}
-
-	h1 {
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
