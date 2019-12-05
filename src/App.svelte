@@ -3,55 +3,55 @@
 	export let ProjectName;
 	export let commit;
 	function sshCopy() {
-		var copyText = document.getElementById("ssh");
+		let copyText = document.getElementById("ssh");
 		copyText.select();
 		document.execCommand("copy");
 }
 
 	function mkdirCopy() {
-		var copyText = document.getElementById("mkdir");
+		let copyText = document.getElementById("mkdir");
 		copyText.select();
 		document.execCommand("copy");
 }
 
 	function bareCopy() {
-		var copyText = document.getElementById("bare");
+		let copyText = document.getElementById("bare");
 		copyText.select();
 		document.execCommand("copy");
 }
 
 	function cdCopy() {
-		var copyText = document.getElementById("cd");
+		let copyText = document.getElementById("cd");
 		copyText.select();
 		document.execCommand("copy");
 }
 
 	function initCopy() {
-		var copyText = document.getElementById("init");
+		let copyText = document.getElementById("init");
 		copyText.select();
 		document.execCommand("copy");
 }
 
 	function remoteCopy() {
-		var copyText = document.getElementById("remote");
+		let copyText = document.getElementById("remote");
 		copyText.select();
 		document.execCommand("copy");
 }
 
 	function addCopy() {
-		var copyText = document.getElementById("add");
+		let copyText = document.getElementById("add");
 		copyText.select();
 		document.execCommand("copy");
 }
 
 	function commitCopy() {
-		var copyText = document.getElementById("commit");
+		let copyText = document.getElementById("commit");
 		copyText.select();
 		document.execCommand("copy");
 }
 
 	function pushCopy() {
-		var copyText = document.getElementById("push");
+		let copyText = document.getElementById("push");
 		copyText.select();
 		document.execCommand("copy");
 }
@@ -110,4 +110,4 @@
 			<button class="waves-effect waves-light btn-small" on:click={pushCopy}>Copy</button>
 		</li>
 	</ol>
-</main>
+</main>	
