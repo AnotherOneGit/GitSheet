@@ -58,15 +58,12 @@
 
 </script>
 
-<main class="container">
+<main class="container row">
   <div class="navbar-fixed">
-    <nav>
+    <nav class="container">
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">GitSheets</a>
-        <ul class="right hide-on-med-and-down">
+        <ul>
           <li><a href="sass.html">Start</a></li>
-        </ul>
-		<ul class="left hide-on-med-and-down">
           <li><a href="badges.html">Clone</a></li>
         </ul>
       </div>
