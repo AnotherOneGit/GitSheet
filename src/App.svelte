@@ -59,7 +59,20 @@
 </script>
 
 <main>
-	<!-- <h1>Заполните все поля и копируйте команды в консоль</h1> -->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">GitSheets</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="sass.html">Start</a></li>
+        </ul>
+		<ul class="left hide-on-med-and-down">
+          <li><a href="badges.html">Clone</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+	<h1>Заполните все поля и копируйте команды в консоль</h1>
 	<div class="row">
 		<form class="col s12">
 			<div class="row">
