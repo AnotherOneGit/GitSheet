@@ -58,7 +58,7 @@
 
 </script>
 
-<main>
+<main class="container">
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper">
