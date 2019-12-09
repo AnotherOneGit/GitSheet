@@ -4,13 +4,11 @@
 	export let commit;
 	function Copy(){
 		let id = this.id;
-		alert(id);
 		let copyText = document.getElementById(id);
 		copyText.select();
 		document.execCommand("copy");
 	}
 </script>
-
 <main class="container row">
   <div class="navbar-fixed">
     <nav class="container">
