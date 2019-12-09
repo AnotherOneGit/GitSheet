@@ -2,8 +2,14 @@
 	export let UserName;
 	export let ProjectName;
 	export let commit;
+	export let ids = [
+		{tag: "commit", value: "git commit -m"},
+		{tag: "add", value: "git add ."}
+	]
+	export let classes="waves-effect waves-light btn-small";
 	function Copy(){
 		let id = this.id;
+		alert(id);
 		let copyText = document.getElementById(id);
 		copyText.select();
 		document.execCommand("copy");
@@ -40,6 +46,12 @@
 		</form>
 	</div>
 	<ol>
+	{#each ids as item}
+		<li>
+		<input id="{item.tag}" value="{item.value} '{commit}'">
+		<button id="{item.tag}" on:Click={Copy} class={classes}>Copy</button>
+		</li>
+	{/each}
 		<li>
 			<input readonly id="init" value="git init">
 			<button id="init" class="waves-effect waves-light btn-small" on:click={Copy}>Copy</button>
@@ -48,14 +60,14 @@
 			<input readonly id="remote" value="git remote add origin https://github.com/{UserName}/{ProjectName}">
 			<button id="remote" class="waves-effect waves-light btn-small" on:click={Copy}>Copy</button>
 		</li>
-		<li>
+		<!-- <li>
 			<input readonly id="add" value="git add .">
 			<button id="add" class="waves-effect waves-light btn-small" on:click={Copy}>Copy</button>
-		</li>
-		<li>
+		</li> -->
+		<!-- <li>
 			<input readonly id="commit" value="git commit -m '{commit}'">
 			<button id="commit" class="waves-effect waves-light btn-small" on:click={Copy}>Copy</button>
-		</li>
+		</li> -->
 		<li>
 			<input readonly id="push" value="git push origin master">
 			<button id="push" class="waves-effect waves-light btn-small" on:click={Copy}>Copy</button>
